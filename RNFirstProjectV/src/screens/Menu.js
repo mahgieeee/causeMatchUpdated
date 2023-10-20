@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { View, Text, StyleSheet, SectionList, Pressable } from 'react-native';
+import { withTheme } from "react-native-paper";
 
 const menuItemsToDisplay = [
   {
@@ -142,6 +143,6 @@ const menuStyles = StyleSheet.create({
   },
 });
 
-export default Menu;
+export default withTheme(Menu);
 
 

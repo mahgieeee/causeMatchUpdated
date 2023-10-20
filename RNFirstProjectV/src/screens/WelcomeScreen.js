@@ -1,5 +1,6 @@
 import * as React from 'react'; 
 import { Text, View, Image, StyleSheet, Pressable } from 'react-native'; 
+import { withTheme } from "react-native-paper";
 
 const WelcomeScreen = ({ navigation }) => { 
     return ( 
@@ -10,11 +11,11 @@ const WelcomeScreen = ({ navigation }) => {
             /> 
 
             <Text style={styles.title}> 
-                Your matchmaking volunteering app.
+                Matchmaking for Volunteers
             </Text>
 
-            <Pressable onPress={() => navigation.navigate('Menu')}> 
-            <Text style={styles.buttonText}>View Menu</Text> 
+            <Pressable onPress={() => navigation.navigate('Profile')}> 
+            <Text style={styles.buttonText}>View Profile</Text> 
             </Pressable> 
         </View> 
 ); 
@@ -22,9 +23,10 @@ const WelcomeScreen = ({ navigation }) => {
 
 const styles = StyleSheet.create({
     logo: {
-       height: 100,
+       height: 300,
        width: 300,
        resizeMode: 'contain',
+       alignSelf: 'center',
     },
     container: {
       flex: 1,
