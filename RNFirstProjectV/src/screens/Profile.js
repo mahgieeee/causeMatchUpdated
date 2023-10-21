@@ -24,6 +24,21 @@ class Home extends Component{
     navigation.navigate('Interest'); // Replace 'OtherScreen' with the actual screen name
     }
 
+    // Function to navigate to another screen
+    navigateToTag = () => {
+        const { navigation } = this.props; // This assumes that you pass navigation as a prop
+        // Navigate to the desired screen using its name
+        navigation.navigate('Tag'); // Replace 'OtherScreen' with the actual screen name
+    }
+
+    // Function to navigate to another screen
+    navigateToMe = () => {
+        const { navigation } = this.props; // This assumes that you pass navigation as a prop
+        // Navigate to the desired screen using its name
+        navigation.navigate('AboutMe'); // Replace 'OtherScreen' with the actual screen name
+    }
+
+
     render(){
         return(
             <View>
@@ -65,7 +80,7 @@ class Home extends Component{
                         shadowOpacity:80,
                         elevation:15,
                         marginTop:20
-                    }}>
+                    }} onPress={this.navigateToMe}>
                         <Image source={require('../img/work.png')} style={{width:20, height:20, resizeMode: 'contain'}}></Image>
                         <Text style = {{
                             fontSize:15,
@@ -131,7 +146,7 @@ class Home extends Component{
                         shadowOpacity:80,
                         elevation:15,
                         marginTop:20,
-                    }} onPress={this.tryMatch}>
+                    }} onPress={this.navigateToTag}>
                         <Image source={require('../img/trymatch.png')} style={{width:20, height:20, resizeMode: 'contain'}}></Image>
                         <Text style = {{
                             fontSize:15,

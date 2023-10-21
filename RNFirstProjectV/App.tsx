@@ -36,9 +36,11 @@ import LoadingScreen from './src/screens/LoadingScreen';
 import LoginScreen from './src/screens/LoginScreen';
 import AccountScreen from './src/screens/AccountScreen';
 
-import WelcomeScreen from './src/screens/WelcomeScreen'
-import ProfileScreen from './src/screens/Profile'
-import InterestScreen from './src/screens/Interests'
+import WelcomeScreen from './src/screens/WelcomeScreen';
+import ProfileScreen from './src/screens/Profile';
+import InterestScreen from './src/screens/Interests';
+import TagScreen from './src/screens/TagScreen';
+import AboutMe from './src/screens/AboutMeScreen';
 import MenuScreen from './src/screens/Menu';
 import {AuthContextProvider} from './src/context/AuthContext';
 
@@ -92,8 +94,11 @@ const App: () => Node = () => {
             title: 'Home', 
             headerTitle: (props) => <LogoTitle {...props} />, 
           }} />
+
         <Stack.Screen name = "Profile" component = {ProfileScreen} />
         <Stack.Screen name = "Interest" component = {InterestScreen} />
+        <Stack.Screen name = "Tag" component = {TagScreen} />
+        <Stack.Screen name = "AboutMe" component = {AboutMe} />
       </Stack.Navigator> 
       <Footer />
       </NavigationContainer>
